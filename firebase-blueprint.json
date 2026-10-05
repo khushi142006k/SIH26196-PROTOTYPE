@@ -1,0 +1,72 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User account profile and fitness setup",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string" },
+        "avatarUrl": { "type": "string" },
+        "goal": { "type": "string" },
+        "level": { "type": "string" },
+        "daysPerWeek": { "type": "number" },
+        "sessionMinutes": { "type": "number" },
+        "lowImpactMode": { "type": "boolean" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "name", "email"]
+    },
+    "Plan": {
+      "title": "Plan",
+      "description": "Adaptive workout plan for user",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "userId": { "type": "string" },
+        "status": { "type": "string" },
+        "goal": { "type": "string" },
+        "difficulty": { "type": "string" },
+        "weeklyTargetSessions": { "type": "number" },
+        "version": { "type": "number" }
+      },
+      "required": ["id", "name", "userId"]
+    },
+    "WorkoutSessionLog": {
+      "title": "WorkoutSessionLog",
+      "description": "Completed workout log session record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "startedAt": { "type": "string" },
+        "endedAt": { "type": "string" },
+        "completionPct": { "type": "number" },
+        "rpe": { "type": "number" },
+        "feelRating": { "type": "string" },
+        "painFlag": { "type": "boolean" },
+        "usedCamera": { "type": "boolean" },
+        "avgFormScore": { "type": "number" },
+        "pointsEarned": { "type": "number" }
+      },
+      "required": ["id", "userId", "startedAt", "endedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "User profile collection"
+    },
+    "/users/{userId}/plan/{planId}": {
+      "schema": { "$ref": "#/entities/Plan" },
+      "description": "User active workout plan"
+    },
+    "/users/{userId}/sessionLogs/{sessionId}": {
+      "schema": { "$ref": "#/entities/WorkoutSessionLog" },
+      "description": "Workout session logs for a user"
+    }
+  }
+}

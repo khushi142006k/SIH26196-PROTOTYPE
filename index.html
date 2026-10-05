@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FITS-in-ALL - Fitness That Fits Everyone</title>
+    <meta name="description" content="Personalised, adaptive, and safe fitness platform with AI personal trainer Fitz, computer vision camera coach, progress tracking, gamification, and organization dashboards." />
+    <meta property="og:title" content="FITS-in-ALL - Fitness That Fits Everyone" />
+    <meta property="og:description" content="Personalised, adaptive, and safe fitness platform with AI personal trainer Fitz, computer vision camera coach, progress tracking, gamification, and organization dashboards." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#7DD3C0" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#FBFCFE] dark:bg-[#0B1220] text-[#1E293B] dark:text-[#E6EDF7] font-sans antialiased selection:bg-[#7DD3C0] selection:text-[#0F3D36]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW reg fail:', err));
+        });
+      }
+    </script>
+  </body>
+</html>
+

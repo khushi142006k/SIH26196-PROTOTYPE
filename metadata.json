@@ -1,0 +1,6 @@
+{
+  "name": "FITS-in-ALL - Fitness That Fits Everyone",
+  "description": "Personalised, adaptive, and safe fitness platform with AI personal trainer Fitz, computer vision camera coach, progress tracking, gamification, and organization dashboards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
