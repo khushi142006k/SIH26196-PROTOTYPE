@@ -38,7 +38,7 @@ AI	Google Gemini API, @google/genai, Gemini 2.5 Flash, rule-based fallback
 Database / Services	Firebase, Firestore, Firebase Authentication
 Development	npm / Bun, Vite, TypeScript
 5. Architecture
-The proposed architecture connects the web/mobile frontend with backend services for user profiles, workout planning, recommendations, gamification, alerts, analytics, and safety. The AI/ML layer includes workout generation, progress analysis, an adaptive workout engine, an LLM fitness assistant, RAG over a verified exercise database, and pose detection.
+The proposed architecture integrates the web/mobile frontend with backend services for user profiles, workout planning, recommendations, gamification, alerts, analytics, and safety. The AI/ML layer comprises workout generation, progress analysis, an adaptive workout engine, an LLM-based fitness assistant, RAG using a verified exercise database, and pose detection.
 Conceptual flow: User → Fitness Dashboard / Workout / AI Chat → Safety & Grounding → AI Assistant / Workout Engine → Verified Exercise Library and User Progress Data.
 6. Project Structure
 SIH26196-PROTOTYPE/
